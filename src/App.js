@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from './UserForm'
+import Name from './NameComponent'
+import Location from './LocationComponent';
+import ReactDOM from "react-dom";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <h2 className="is-size-4">
+        We'll use the React Context API to pass and receive data in any
+        component.
+      </h2>
+      <div className="container">
+        <Form />
+
+        <h2 className="Display--info">Display User Info Here</h2>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          These two children components will receive data. These could be nested
+          components.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Name />
+        <Location />
+      </div>
     </div>
+
   );
 }
 
