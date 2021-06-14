@@ -3,14 +3,14 @@ import {createSlice} from '@reduxjs/toolkit';
 const nameSlice = createSlice({
     name:"name",
     initialState:{
-        location:""
+        name:""
     },
 
 
 reducers: {
     naming :(state,action)=>{
         if(action.payload){
-            state.location = action.payload;
+            state.name = action.payload;
         }
     }
 }
